@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minesweeper</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<h1 class="headline">Minesweeper – Andrej, Angelina & Berhan Edition</h1>
+
+<div id="topbar" class="status-bar">
+  <div class="info">🚩 <span id="remainingFlags">0</span></div>
+  <div class="info">⏱ <span id="timer">000</span></div>
+  <div class="info">🏆 <span id="highscore">0</span></div>
+  <button class="restart-btn" onclick="restartGame()">Restart</button>
+</div>
+
+
+<div class="controls">
+  <label for="level">Difficulty:</label>
+  <select id="level">
+    <option value="easy">Easy</option>
+    <option value="medium" selected>Medium</option>
+    <option value="hard">Hard</option>
+  </select>
+
+  <label for="theme">Theme:</label>
+  <select id="theme" onchange="toggleTheme()">
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+  </select>
+
+  <button onclick="showHelp()">Help</button>
+  <button id="muteButton" onclick="toggleMute()">🔊 Sound</button>
+</div>
+
+<p id="message" class="hidden"></p>
+<p id="endscore" class="hidden"></p>
+<div id="game"></div>
+
+<audio id="clickSound" src="Sounds/click.mp3" preload="auto"></audio>
+<audio id="explosionSound" src="Sounds/explosion.mp3" preload="auto"></audio>
+<audio id="bgMusic" src="Sounds/music.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

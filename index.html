@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minesweeper</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Courier New', monospace;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .background-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 85%; /* Changed from 50% to 60% to move it lower */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 40px 70px;
+      font-size: 40px;
+      background-color: #34F12B;
+      color: white;
+      border: black 2px;
+      border-radius: 10px;
+      cursor: pointer;
+      z-index: 1;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .play-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <img src="Pictures/Homescreen.png" alt="Minesweeper Background" class="background-img">
+  <button class="play-button" onclick="location.href='minesweeper.html'"><b>Play ▷</b></button>
+</div>
+</body>
+</html>
